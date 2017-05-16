@@ -125,6 +125,7 @@ img{
 }
 .product{
     border: 1px solid #999;
+    margin-bottom: 3em;
 }
 .product-item li{
     width: 33.33%;
@@ -298,3 +299,66 @@ img{
     background-repeat: no-repeat;
 }
 /*----Footer-----*/
+
+/*-----Menu-------*/
+.blogShort{ border-bottom:1px solid #ddd;}
+.add{background: #333; padding: 10%; height: 300px;}
+
+.nav-sidebar { 
+    width: 100%;
+}
+.nav-sidebar a {
+    color: #333;
+    -webkit-transition: all 0.08s linear;
+    -moz-transition: all 0.08s linear;
+    -o-transition: all 0.08s linear;
+    transition: all 0.08s linear;
+}
+.nav-sidebar .active a { 
+    cursor: default;
+    background-color: #0b56a8; 
+    color: #fff; 
+}
+.nav-sidebar .active a:hover {
+    background-color: #E50000;   
+}
+.nav-sidebar .text-overflow a,
+.nav-sidebar .text-overflow .media-body {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis; 
+}
+
+.nav-sidebar{
+    background-color: #bf1e2e;
+    min-height: 970px;
+}
+.tabs li a{
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1em;
+    position: relative;
+}
+.tabs li.active a,.tabs li a:hover{
+    background-color: transparent;
+    color: #fde30d;
+    transition: 0.5s all ease;
+}
+.tabs li.active a:after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #bf1e2e; 
+}
+.tabs li.active a:hover{
+    background-color: transparent;
+}
+.tab-content{
+    padding: 0 0 3em 1em;
+}
