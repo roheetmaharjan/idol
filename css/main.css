@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@font-face {
+  font-family: 'JosefinSans-Bold';
+  src: url('../fonts/Josefin_Sans/JosefinSans-Bold.ttf'); /* IE9 Compat Modes */
+  src: url('../fonts/Josefin_Sans/JosefinSans-Bold.ttf') format('truetype'), /* Modern Browsers */
+       url('../fonts/Josefin_Sans/JosefinSans-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 
 *{
     box-sizing: border-box;
@@ -26,6 +32,7 @@ ul{
     padding: 0;
 }
 h1,h2,h3,h4,h5,h6{
+    font-family: 'JosefinSans-Bold', sans-serif;
     padding: 0;
     margin-bottom: 20px;
 }
@@ -64,10 +71,11 @@ img{
     background-image: url(../images/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 450px;
+    min-height: 450px;
     width: 100%;
 }
 .bannertext{
+    font-family: 'JosefinSans-Bold', sans-serif;
     position: absolute;
     padding: 150px 350px;
     font-size: 50px;
@@ -97,6 +105,8 @@ img{
     width: 175px;
 }
 .navbar-inverse .navbar-nav li >a{
+    font-family: 'JosefinSans-Bold',sans-serif;
+    font-weight: bold;
     font-size: 14px;
     text-transform: uppercase;
     color: #fff;
@@ -174,6 +184,7 @@ img{
     clear: both;
 }
 .button{
+    font-family: 'JosefinSans-Bold', sans-serif;
     padding: 8px 2em;
     color: #fde30d;
     background-color: #bf1e2e;
@@ -361,4 +372,197 @@ img{
 }
 .tab-content{
     padding: 0 0 3em 1em;
+}
+
+/*--------Reviews----------*/
+.review-list{
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #eee;
+    margin-bottom: 2em;
+}
+.review-list .image-holder{
+    width: 10%;
+    float: left;
+    box-sizing: border-box;
+    min-height: 120px
+}
+.review-list .image-holder span{
+    font-size: 40px;
+    color: #ccc;
+    border: 1px solid #ccc;
+    padding: 40px;
+    width: 100%;
+    text-align: center;
+}
+.review-list .text-holder{
+    width: 70%;
+    float: left;
+    padding-left: 1em;
+    box-sizing: border-box;
+    min-height: 120px
+}
+.review-list .text-holder h3{
+    color: #bf1e2e;
+    margin-top: 0;
+}
+.review-list .stars{
+    width: 20%;
+    float: left;
+    box-sizing: border-box;
+    min-height: 120px
+}
+.rating { 
+  border: none;
+  float: right;
+  background-color: #333;
+    padding: 5px 15px;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #fde30d; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+.review-list:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.rate{
+    display: block;
+    float: right;
+}
+.rate p{
+    color: #333;
+    padding-top: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------Responsive Design------------------*/
+@media screen and (max-width:991px){
+    .product-item li{
+        width: 48%;
+        margin-right: 1%;
+    }
+    .product-item li:nth-child(1){
+        padding-right: 0;
+    }
+    .product-item li:nth-child(3){
+        padding-left: 0;
+    }
+    .product-item li:nth-child(2){
+        padding-right: 0;
+        padding: 0 0;
+    }
+    .footer-grid{
+        width: 50%;
+    }
+    .footer-grid:nth-child(3){
+        width: 100%;
+    }
+    .review-list .image-holder{
+        width: 20%;
+    }
+    .review-list .text-holder{
+        width: 80%;
+        margin-bottom: 2em
+    }
+    .review-list .stars{
+        width: 100%;
+        min-height: 50px;
+    }
+    .rating{
+        float: left
+    }
+}
+@media screen and (max-width:948px){
+    .banner{
+        height: auto;
+        overflow: hidden;
+    }
+    .bannertext{
+        width: 100%;
+        padding: 150px 100px
+    }
+}
+@media screen and (max-width:608px){
+    .product-item li{
+        width: 100%;
+        margin-right: 0;
+    }
+}
+@media screen and (max-width:550px){
+    .footer-grid{
+        width: 100%;
+    }
+    .review-list .image-holder{
+        width: 25%;
+    }
+    .review-list .text-holder{
+        width: 75%;
+        margin-bottom: 2em
+    }
+}
+@media screen and (max-width:450px){
+    .bannertext{
+        padding: 150px 0;
+    }
+}
+@media screen and (max-width:380px){
+    .review-list .image-holder{
+        width: 100%;
+    }
+    .review-list .text-holder{
+        width: 100%;
+        margin-bottom: 2em
+    }
 }
