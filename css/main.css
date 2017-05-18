@@ -121,8 +121,14 @@ img{
 .navbar-inverse .navbar-nav li >a:hover{
     color: #fde30d;
 }
-
-
+.affix {
+      top: 0;
+      width: 100%;
+    z-index: 1111;
+  }
+ .affix + .container-fluid {
+      padding-top: 70px;
+  }
 /*---Main Section------*/
 .main{
     padding: 2em 0;
