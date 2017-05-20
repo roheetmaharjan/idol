@@ -121,17 +121,11 @@ img{
 .navbar-inverse .navbar-nav li >a:hover{
     color: #fde30d;
 }
-.affix {
-      top: 0;
-      width: 100%;
-    z-index: 1111;
-  }
- .affix + .container-fluid {
-      padding-top: 70px;
-  }
+
+
 /*---Main Section------*/
 .main{
-    padding: 2em 0;
+    padding: 3em 0;
 }
 .main h4, .welcome-section h4{
     color: #bf1e2e;
@@ -470,8 +464,19 @@ img{
 }
 
 
-
-
+/*--Reviews-*/
+.reviews{
+    background-color: #333;
+    padding: 80px 0;
+    color: #fff;
+}
+.testimonial{
+    position: relative;
+}
+.reviews .testimonial-chef{
+    position: absolute;
+    top: -130px;
+}
 
 
 
@@ -528,6 +533,9 @@ img{
     }
     .rating{
         float: left
+    }
+    .reviews .testimonial-chef{
+        display: none;
     }
 }
 @media screen and (max-width:948px){
