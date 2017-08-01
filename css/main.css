@@ -134,7 +134,7 @@ img{
     margin-bottom: 30px;
 }
 .product{
-    border: 1px solid #999;
+    border: 1px solid #ddd;
     margin-bottom: 3em;
 }
 .product-item li{
@@ -187,6 +187,7 @@ img{
     font-family: 'JosefinSans-Bold', sans-serif;
     padding: 8px 2em;
     color: #fde30d;
+    display: inline-block;
     background-color: #bf1e2e;
     transition: 0.5s all ease-out;
 }
@@ -480,10 +481,123 @@ img{
 
 
 
+/*------Add to cart--------*/
+/*------Scroll Bar Design-------*/
 
+.item-list::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
 
+.item-list::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
 
+.item-list::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+/*------Scroll Bar Design-------*/
+.item-list-left{
+    box-sizing: border-box;
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+}
+.cart{
+    width: 39%;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+.cart{
+    padding-left: 20px;
+}
+.cart h4{
+    text-transform: uppercase;
+}
+.cart table{
+    border: 1px solid #ddd;
+}
+.cart table button,
+.cart table .btn{
+    border-radius: 0;
+}
+.cart table .btn-danger{
+    background-color: #bf1e2e;
+}
+.cart table .media-heading{
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+.cart table .media-heading a{
+    color: #bf1e2e;
+}
+.add-btn{
+    color: #fff;
+    background-color: #bf1e2e;
+    padding: 5px 10px 5px 5px;
+    transition: 0.5s all ease;
+}
+.add-btn:hover{
+    background-color: #333;
+    color: #fff;
 
+}
+.add-btn::before{
+    content: '\f067';
+    display: inline-block;
+    font-family: fontAwesome;
+    font-size: 12px;
+    margin-right: 5px;
+    text-align: center;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+}
+.add-btn:hover::before{
+    transform: rotate(360deg);
+}
+.item-list{
+    margin: 0;
+    padding-right: 20px;
+    height: 450px;
+    overflow-y: scroll;
+}
+.item-list li{
+    display: table;
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border: 1px solid #ddd;
+}
+.item-list .item-image{
+    display: table-cell;
+    width: 10%;
+    vertical-align: middle;
+    padding: 0;
+    background-color: #fff;
+}
+.item-list .item-description{
+    display: table-cell;
+    width: 90%;
+    vertical-align: top;
+    padding: 10px 10px 10px 20px;
+}
+.item-list .item-description h3{
+    font-family: 'JosefinSans-Bold', sans-serif;
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 18px;
+    text-transform: capitalize;
+}
 
 
 
