@@ -50,73 +50,67 @@
 </div>
 <main class="main">
     <div class="container">
-            <div class="item-list-left"> 
-                <h4>EINKAUFSWAGEN</h4> 
-                <ul class="item-list">
-                    <li>
-                        <div class="item-image">
-                            <img src="images/cart.jpg" alt="">
-                        </div>
-                        <div class="item-description">
-                            <h3>Pizza</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, voluptatem.</p>
-                            <a href="#" class="add-btn">$4.87</a>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="item-image">
-                            <img src="images/cart.jpg" alt="">
-                        </div>
-                        <div class="item-description">
-                            <h3>Pizza</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, voluptatem.</p>
-                            <a href="#" class="add-btn">$4.87</a>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="item-image">
-                            <img src="images/cart.jpg" alt="">
-                        </div>
-                        <div class="item-description">
-                            <h3>Pizza</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, voluptatem.</p>
-                            <a href="#" class="add-btn">$4.87</a>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="item-image">
-                            <img src="images/cart.jpg" alt="">
-                        </div>
-                        <div class="item-description">
-                            <h3>Pizza</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, voluptatem.</p>
-                            <a href="#" class="add-btn">$4.87</a>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="item-image">
-                            <img src="images/cart.jpg" alt="">
-                        </div>
-                        <div class="item-description">
-                            <h3>Pizza</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, voluptatem.</p>
-                            <a href="#" class="add-btn">$4.87</a>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="item-image">
-                            <img src="images/cart.jpg" alt="">
-                        </div>
-                        <div class="item-description">
-                            <h3>Pizza</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, voluptatem.</p>
-                            <a href="#" class="add-btn">$4.87</a>
-                        </div>
-                    </li>
-                </ul>
+            <div class="form"> 
+
+                <h4>FÜHREN SIE FORM</h4>
+				<div class="row">
+                    <div class="form-group col-lg-6">
+                        <label>Vorname</label>
+                        <input type="password" name="" class="form-control" id="" value="">
+                    </div>
+                    
+                    <div class="form-group col-lg-6">
+                        <label>Nachname</label>
+                        <input type="password" name="" class="form-control" id="" value="">
+                    </div>
+                                    
+                    <div class="form-group col-lg-6">
+                        <label>Email Address</label>
+                        <input type="" name="" class="form-control" id="" value="">
+                    </div>
+                    
+                    <div class="form-group col-lg-6">
+                        <label>Telefonnummer</label>
+                        <input type="" name="" class="form-control" id="" value="">
+                    </div>
+                </div>
+
+                <h4>Lieferadresse</h4>
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label>Adresse 1</label>
+                        <input type="" name="" class="form-control" id="" value="">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Adresse 2</label>
+                        <input type="" name="" class="form-control" id="" value="">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Postleitzahl</label>
+                        <input type="" name="" class="form-control" id="" value="">
+                    </div>
+                </div>
+
+                <h4>Zahlungsart</h4>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <input type="radio" name="payment" id="paypal" checked>
+                        <label for="paypal"><span class="fa fa-cc-paypal"></span> Paypal</label>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <input type="radio" name="payment" id="mastercard"> 
+                        <label for="mastercard"><span class="fa fa-cc-mastercard"></span> Mastercard</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="radio" name="payment" id="visa"> 
+                        <label for="visa"><span class="fa fa-cc-visa"></span> Visa</label>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-success">Vorgehen</a>
             </div>
             <div class="cart">
-                <h4>Ihr Warenkorb</h4>
+                <h4>In deinem Warenkorb</h4>
                 <table class="table table-condensed">
                 <thead>
                     <tr>
@@ -148,14 +142,6 @@
                         <td>   </td>
                         <td><h3>Total</h3></td>
                         <td class="text-right"><h3><strong>$31.53</strong></h3></td>
-                    </tr>
-                    <tr>
-                        <td>   </td>
-                        <td>    </td>
-                        <td style="text-align:right">
-                        <a href="form.html" class="btn btn-success">
-                            Checkout <span class="fa fa-angle-right"></span>
-                        </a></td>
                     </tr>
                 </tbody>
             </table>   
