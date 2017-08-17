@@ -72,14 +72,21 @@ img{
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 450px;
+    background-attachment: fixed;
     width: 100%;
+    position: relative;
+}
+.banner-text-wrap{
+    position: absolute;
+    top: 40%;
+    width: 60%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 .bannertext{
     font-family: 'JosefinSans-Bold', sans-serif;
-    position: absolute;
-    padding: 150px 350px;
     font-size: 50px;
-    height: 450px;
     width: 100%;
     right: 0;
     text-align: center;
@@ -88,10 +95,27 @@ img{
     text-shadow: 2px 2px 3px #000;
     font-weight: bold;
 }
+#custom-search-input .form-control{
+    border-radius: 0;
+}
+#custom-search-input .form-control:focus{
+    border: 1px solid #fde30d;
+    color: #333
+}
+#custom-search-input .btn-info{
+    background-color: #fde30d;
+    color: #333;
+    border: 1px solid #fde30d;
+    border-radius: 0;
+}
 .navbar {
       margin-bottom: 0;
       border-radius: 0;
-    padding: 1em 0;
+      padding: 1em 0;
+       width: 100%;
+       top: 0;
+        transition: 0.5s all ease;
+        z-index: 111;
 }
 .navbar-inverse{
     background-color: rgba(0, 0, 0, 0.76);
