@@ -120,6 +120,7 @@ img{
 .navbar-inverse{
     background-color: rgba(0, 0, 0, 0.76);
     border: none;
+    z-index: 111111;
 }
 .navbar-brand{
     margin: 0;
@@ -384,7 +385,6 @@ img{
 
 .nav-sidebar{
     background-color: #bf1e2e;
-    min-height: 970px;
 }
 .tabs li a{
     color: #fff;
@@ -454,42 +454,6 @@ img{
     box-sizing: border-box;
     min-height: 120px
 }
-.rating { 
-  border: none;
-  float: right;
-  background-color: #333;
-    padding: 5px 15px;
-}
-
-.rating > input { display: none; } 
-.rating > label:before { 
-  margin: 5px;
-  font-size: 1.25em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005";
-}
-
-.rating > .half:before { 
-  content: "\f089";
-  position: absolute;
-}
-
-.rating > label { 
-  color: #fde30d; 
- float: right; 
-}
-
-/***** CSS Magic to Highlight Stars on Hover *****/
-
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
-
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
 .review-list:after{
     content: '';
     display: block;
@@ -700,13 +664,9 @@ input[type="radio"]:checked + label:after {
 
 
 
-
-
-
-
-
-
-
+    #toggle{
+        display: none;
+    }
 /*------------Responsive Design------------------*/
 @media screen and (max-width:991px){
     .product-item li{
@@ -754,10 +714,18 @@ input[type="radio"]:checked + label:after {
     }
     .bannertext{
         width: 100%;
-        padding: 150px 100px
     }
 }
 @media screen and (max-width:767px){
+    .no-padding{
+    padding: 0;
+}
+    .bannertext{
+        font-size: 30px;
+    }
+    .banner-text-wrap{
+        width: 90%;
+    }
     .navbar-inverse .navbar-toggle{
         border: none;
     }
@@ -768,38 +736,80 @@ input[type="radio"]:checked + label:after {
         height: 40px;
         position: relative;
     }
-    /*.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
-        background-color: #bf1e29;
-        position: relative;
-    }
-    .navbar-toggle .icon-bar+.icon-bar{
-        margin: 0;
-    }
-    .navbar-toggle .icon-bar{
-        position: absolute;
-        left:50%;
-        top:50%;
-        transform:translate(-50%,-50%);
-        transition:0.5s all ease;
-    }
-    .navbar-toggle .icon-bar:first-child{
-        top: 12px
-    }
-    .navbar-toggle .icon-bar:last-child{
-        top: 28px;
-    }
-
-    .navbar-toggle.collapsed .icon-bar:first-child{
-        top:0;
-        transform:rotate(45deg);
-    }
-    .navbar-toggle.collapsed .icon-bar:nth-child(2){
-        display: none
-    }
-    .navbar-toggle.collapsed .icon-bar:last-child{
-        top:0;
-        transform:rotate(135deg);
-    }*/
+    .icon{
+   background:#fde30d;
+   display:inline-block;
+   width:40px;
+   height:40px;
+   border-radius:50%;
+   color:#fff;
+   position:relative;
+   cursor:pointer;
+   display:none;
+}
+.icon .ham{
+   width:15px;
+   height:1px;
+   background-color:#333;
+   display:block;
+   position:absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   transition:0.5s all ease;
+}
+.icon .ham:before,.icon .ham:after{
+   content:'';
+   width:15px;
+   height:1px;
+   background-color:#333;
+   display:block;
+   position:absolute;
+   transition:0.5s all ease;
+}
+.icon .ham:before{
+   top:-5px;
+}
+.icon .ham:after{
+   top:5px;
+}
+.icon{
+    display:block;
+}
+label{
+    margin-bottom: 0;
+}
+.tab-content{
+    padding: 0;
+}
+.menu-bar{
+   padding:5px 0 5px 5px;
+   text-align:center;
+   border-radius: 30px;
+}
+nav ul.menu{
+    position:absolute;
+    background-color: #bf1e2e;
+    top:100%;
+    height: 500px;
+    overflow: scroll;
+    left:-100%;
+    width:100%;
+    z-index: 111;
+    opacity:0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    visibility:hidden;
+    transition:0.5s all ease;
+   }
+#toggle:checked + .menu{
+    opacity:1;
+    visibility:inherit;
+    left:0;
+}
+.tabs li.active a:after{
+    display: none;
+}
 }
 @media screen and (max-width:640px){
     .item-list-left{
@@ -832,9 +842,6 @@ input[type="radio"]:checked + label:after {
     }
 }
 @media screen and (max-width:450px){
-    .bannertext{
-        padding: 150px 0;
-    }
 }
 @media screen and (max-width:380px){
     .review-list .image-holder{
